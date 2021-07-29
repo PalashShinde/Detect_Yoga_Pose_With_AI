@@ -8,7 +8,7 @@ This Flask application mainly helps in Detetcting Similarity between user input 
 Application in NutShell :-
 1) User selects a Assan(Pose) Name form drop down List.
 2) Uploads the image of their Assan Pose.
-3) Application then calls Alphapose Model to get pose keyjoints for a given user image and compares it with exsisting ideal assan pose using Cosine Similarity and returns a similairty score of two pose with their pose keyjoints projection. 
+3) Application then calls Alphapose Model to get pose keyjoints for a given user image and compares it with exsisting ideal assan pose keyjoints. The comparision of two pose is done using Cosine Similarity and finally app returns a similairty score for two pose with their pose keyjoints projection on User Input Image and Ideal Assan Image to visually judge a difference between the two pose. 
 
 ![Yoga Pose Simlirity App Demo](https://github.com/PalashShinde/Detect_Yoga_Pose_With_AI/blob/main/app/gifs/yoga_cut_version.gif)
 

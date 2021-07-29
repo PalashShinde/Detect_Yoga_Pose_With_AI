@@ -12,14 +12,48 @@ Application in NutShell :-
 
 ![Yoga Pose Simlirity App Demo](https://github.com/PalashShinde/Detect_Yoga_Pose_With_AI/blob/main/app/gifs/yoga_cut_version.gif)
 
-# SetUP and Instruction
+## SetUP and Instruction
 
 ## Alphapose Installation Setup
 Please check out [docs/INSTALL.md](docs/INSTALL.md)
 
 ## FastPose & Yolov3 Model Weights 
 ### Application requires FastPose & Yolov3 Model Weights Please refer [docs/MODEL_ZOO.md](docs/MODEL_ZOO.md) for more info.
-#### [yolov3-spp.weights]()  [FastPose](https://drive.google.com/u/0/uc?id=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn&export=download)
+#### To download [yolov3-spp.weights](https://pjreddie.com/media/files/yolov3-spp.weights) & [FastPose](https://drive.google.com/u/0/uc?id=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn&export=download) Once completed, place the weights in below dirs ~
 ``` bash
-./app/detector/yolo/data/yolov3-spp.weights
+~/app/detector/yolo/data/yolov3-spp.weights
+```
+``` bash
+~ /app/pretrained_models/fast_res50_256x192.pth
+```
+### Run Flask Application Locally.
+``` bash
+cd ~/app/
+python3 app.py
+```
+
+### Test images are in /db_images/
+``` bash
+cd ~/app/db_images/
+tree
+.
+  ├── Ardha_Matsyendrasana.jpg
+  ├── Ashtanga_Namaskara.JPG
+  ├── Baddha_Konasana.jpg
+  ├── Baddha_konsana_test.png
+  ├── Balasana.JPG
+  ├── Bharadvajasana.JPG
+  ├── Bhujangasana.jpg
+  ├── Bitilasana.jpg
+  ├── Chakrasana.jpg
+  ├── Chaturanga_Dandasana.jpg
+  ├── Dhanurasana.jpg
+  ├── Gomukhasana.jpg
+  ├── Natarajasana.jpg
+  ├── Trikonasana.jpg
+  ├── Utkatasana.jpg
+  ├── Uttanasana.jpg
+  ├── Viparita_Karani.jpg
+  ├── Virabhadrasana.jpg
+  └── Vriksasana.jpg
 ```

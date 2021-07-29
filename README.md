@@ -4,8 +4,12 @@
 
 ### Yoga Pose Simlirity Detection
 
-This Flask application mainly helps in Detetcting Similarity between user input Yoga Pose and Ideal one and Returns a Similarity score for those two Poses. 
+This Flask application mainly helps in Detetcting Similarity between user input Yoga Pose and Ideal Assan Pose and Returns a Similarity score for those two Poses.
+Application in NutShell :-
+1) User selects a Assan(Pose) Name form drop down List.
+2) Uploads the image of their Assan Pose.
+3) Application then calls Alphapose Model to get pose keyjoints for a given user image and compares it with exsisting ideal assan pose using Cosine Similarity and returns a similairty score of two pose with their pose keyjoints projection. 
 
-![Yoga Pose Simlirity App ](https://github.com/PalashShinde/Detect_Yoga_Pose_With_AI/blob/main/app/gifs/yoga_cut_version.gif)
+![Yoga Pose Simlirity App Demo](https://github.com/PalashShinde/Detect_Yoga_Pose_With_AI/blob/main/app/gifs/yoga_cut_version.gif)
 
 ### Try it now

@@ -12,4 +12,14 @@ Application in NutShell :-
 
 ![Yoga Pose Simlirity App Demo](https://github.com/PalashShinde/Detect_Yoga_Pose_With_AI/blob/main/app/gifs/yoga_cut_version.gif)
 
-### Try it now
+# SetUP and Instruction
+
+## Alphapose Installation Setup
+Please check out [docs/INSTALL.md](docs/INSTALL.md)
+
+## FastPose & Yolov3 Model Weights 
+### Application requires FastPose & Yolov3 Model Weights Please refer [docs/MODEL_ZOO.md](docs/MODEL_ZOO.md) for more info.
+#### [yolov3-spp.weights]()  [FastPose](https://drive.google.com/u/0/uc?id=1kQhnMRURFiy7NsdS8EFL-8vtqEXOgECn&export=download)
+``` bash
+./app/detector/yolo/data/yolov3-spp.weights
+```

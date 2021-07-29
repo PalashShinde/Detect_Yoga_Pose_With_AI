@@ -6,6 +6,6 @@
 
 This Flask application mainly helps in Detetcting Similarity between user input Yoga Pose and Ideal one and Returns a Similarity score for those two Poses. 
 
-![Classification](Inserlink)
+![Yoga Pose Simlirity App ](https://github.com/PalashShinde/Detect_Yoga_Pose_With_AI/blob/main/app/gifs/yoga_cut_version.gif)
 
 ### Try it now

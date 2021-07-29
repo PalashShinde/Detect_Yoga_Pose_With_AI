@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Yoga Pose Estimation</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+		rel="stylesheet" type="text/css">
+</head>
+
+<script>
+	function showloading() {
+		image = document.getElementById('loading_image');
+		image.style.display = 'inline'
+	}
+</script>
+
+<style>
+	.img_holder img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	.btn-file {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.btn-file input[type=file] {
+		position: absolute;
+		top: 0;
+		right: 0;
+		min-width: 100%;
+		min-height: 100%;
+		font-size: 100px;
+		text-align: right;
+		filter: alpha(opacity=0);
+		opacity: 0;
+		outline: none;
+		background: white;
+		cursor: inherit;
+		display: block;
+	}
+
+	.konverge_logo img {
+		margin: auto;
+		display: block;
+		width: 300px;
+		margin-top: 10px;
+	}
+
+	.konverge_logo h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		padding-top: 50px;
+		padding-bottom: 8px;
+	}
+
+	.konverge_logo span {
+		color: #083558;
+	}
+
+	.konverge_logo p {
+		color: #fff;
+		font-size: 20px;
+	}
+
+	.post_man {
+		background-color: #ffffff;
+		padding: 20px;
+		color: #636363;
+		min-height: 345px;
+		margin: 40px 0px;
+		border-radius: 0.25em;
+	}
+
+	.post_man h2 {
+		color: #272727;
+		font-size: 2.2rem;
+		padding-bottom: 12px;
+	}
+
+	.post_man p {
+		color: rgb(238, 230, 230);
+	}
+
+	.curl {
+		background-color: #ffffff;
+		margin: 40px 0px;
+		color: #636363;
+		padding: 20px;
+		min-height: 345px;
+		border-radius: 0.25em;
+	}
+
+	.curl h2 {
+		color: #272727;
+		font-size: 2.2rem;
+		padding-bottom: 12px;
+	}
+
+	.curl p {}
+
+	.curl li {}
+
+	.practices {}
+
+	.practices h2 {
+		color: #fff;
+		padding-bottom: 8px;
+		border-bottom: 1px solid #fff;
+		border-width: thin;
+		width: 190px;
+		margin-bottom: 45px;
+	}
+
+	.practices p {
+		color: #fff;
+	}
+
+	.practices li {
+		color: #fff;
+		font-size: 20px;
+		padding-bottom: 10px;
+	}
+
+	.list-inline li i {
+		margin-right: 15px;
+	}
+
+	code {
+		padding: 2px 4px;
+		font-size: 90%;
+		color: #cfd2da;
+		border-radius: 4px;
+	}
+
+	hr {
+		margin-top: 20px;
+		height: 0.2px;
+		background: rgba(255 255 255);
+	}
+
+	.post-curl p {
+		font-size: 20px;
+		color: #fff;
+	}
+
+	.post-curl span {
+		color: #68e890;
+		margin-right: 8px;
+		font-weight: bold;
+	}
+
+	.API {
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		margin-top: 130px;
+		font-size: 28px;
+	}
+
+
+</style>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="konverge_logo">
+					<h1 style="text-align:center"> Detect Similarity level in Yoga Pose using Artificial
+							Intelligence (AI)
+					</h1>
+					<br><br>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="row">
+				<div class="col-md-6">
+					<img style="width:100%" src="../static/pne.png" />
+				</div>
+				<div class="col-md-6">
+					<!-- <form action="{{url_for('upload')}}" method="post"> -->
+					<form action="http://0.0.0.0:5000/upload" enctype="multipart/form-data" method="post" onsubmit="showloading()">
+						<label for="lname">
+							<font> Please Select The Assan Name from Drop Down List </font>
+						</label>
+
+						<label for="assan_name">:</label>
+						<select class="form-control" name="assan_name" id="Assan_Drop_Down">
+							<option value='Ustrasana'> </option>
+							<option value='Ustrasana'>Ustrasana</option>
+							<option value='Baddha_Konasana'>Baddha_Konasana</option>
+						</select>
+
+						<br><br>
+						<label for="lname">
+							<font> Please Upload the Assan Image </font>
+						</label>
+						<input class="form-control-file" type="file" name="image" style=" color: white"/>
+
+						<br>
+
+
+						<label for="lname">
+							<font> Please enter the a username </font>
+						</label>
+						<br><input class="form-control" type="username" name="username" placeholder="username"><br>
+
+
+						<br><input type="submit" value="Submit" class="btn btn-lg btn-primary" style="margin_right:70px"><br>
+						<br>
+					</form>
+
+
+					<div style="text-align: center">
+						<img id="loading_image" style="display: none"
+							src="{{ url_for('static', filename='loading.gif')}}">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+
+</html>
